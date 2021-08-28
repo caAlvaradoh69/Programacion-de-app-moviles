@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Contactos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-text>Lista de Contactos </ion-text>
+
+
+  <ion-list *ngFor="let element of listaContactos">
+
+   {{element.id}} {{element.nombre}}
+
+
+  </ion-list>
+
+
+
+
+
+  <ion-content>
+    <div class="ion-padding">
+      <ion-button routerLink="/home" routerDirection="forward">vovler a home</ion-button>
+    </div>
+  </ion-content>
+</ion-content>
+
+
+
+
+
+

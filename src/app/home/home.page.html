@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -17,4 +17,12 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+
+  <ion-content [fullscreen]="true">
+    <ion-text></ion-text>
+    <ion-content>
+      <div class="ion-padding">
+        <ion-button routerLink="/contactos" routerDirection="forward">Ir a Contactos</ion-button>
+      </div>
+  </ion-content>
 </ion-content>
