@@ -11,11 +11,15 @@
   <ion-text>Lista de Contactos </ion-text>
 
 
-  <ion-list *ngFor="let element of listaContactos">
-
-   {{element.id}} {{element.nombre}}
-
-
+  <ion-list *ngFor="let element of listaContactos">  
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img src= "assets/img/avatar.png"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{element.id}} {{element.nombre}}
+      </ion-label>
+    </ion-item>  
   </ion-list>
 
 
