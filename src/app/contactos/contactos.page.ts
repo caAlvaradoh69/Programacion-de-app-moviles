@@ -11,27 +11,23 @@ export class ContactosPage implements OnInit {
   private listaContactos = [
     {
       id:'1',
-      nombre:'Juan Perez',
+      nombre:'Juan',
+      apellidos:'Perez Gómez',
+      direccion:'asd 123',
       fono: '+56985789632',
       email:'jp@gmail.com'
     },
     {
       id:'2',
-      nombre:'Pedro Muñoz',
-      fono: '+56932156478',
-      email:'PedroM@gmail.com'
-    },
-    {
-      id:'3',
-      nombre:'Juan Perez',
-      fono: '+56985789632',
-      email:'jp@gmail.com'
-    },
-
-
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    }
   ]
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

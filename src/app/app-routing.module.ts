@@ -12,16 +12,17 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'pagina2',
-    loadChildren: () => import('./pagina2/pagina2.module').then( m => m.Pagina2PageModule)
-  },
-  {
     path: 'contactos',
-    loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
-  },
-  {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+    children: [
+      {
+        path:'',
+        loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
+      },
+      {
+        path:':contactoId',
+        loadChildren: () => import('./contactos/detalle-contacto/detalle-contacto.module').then( m => m.DetalleContactoPageModule)
+      }
+    ]
   },
 ];
 

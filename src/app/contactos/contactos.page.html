@@ -12,12 +12,12 @@
 
 
   <ion-list *ngFor="let element of listaContactos">  
-    <ion-item>
+    <ion-item [routerLink]="['./', element.id]">
       <ion-avatar slot="start">
         <ion-img src= "assets/img/avatar.png"></ion-img>
       </ion-avatar>
       <ion-label>
-        {{element.id}} {{element.nombre}}
+        {{element.id}} {{element.nombre}} {{element.apellidos}}
       </ion-label>
     </ion-item>  
   </ion-list>

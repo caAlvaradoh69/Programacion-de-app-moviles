@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ContactosPage
+  },  {
+    path: 'detalle-contacto',
+    loadChildren: () => import('./detalle-contacto/detalle-contacto.module').then( m => m.DetalleContactoPageModule)
   }
+
 ];
 
 @NgModule({
