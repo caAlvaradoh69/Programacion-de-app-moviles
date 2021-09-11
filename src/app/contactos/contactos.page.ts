@@ -1,37 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Contacto } from './contacto.model';
+import { ContactosService } from './contactos.service';
 @Component({
   selector: 'app-contactos',
   templateUrl: './contactos.page.html',
   styleUrls: ['./contactos.page.scss'],
 })
 export class ContactosPage implements OnInit {
-
-
-  private listaContactos = [
-    {
-      id:'1',
-      nombre:'Juan',
-      apellidos:'Perez Gómez',
-      direccion:'asd 123',
-      fono: '+56985789632',
-      email:'jp@gmail.com'
-    },
-    {
-      id:'2',
-      nombre:'Maria',
-      apellidos:'Silva Vera',
-      direccion:'dasd 321',
-      fono: '+56957854961',
-      email:'asdasdadsa@gmail.com'
-    }
-  ]
-
-  constructor() {}
-
+  listaContactos: Contacto [] =[];
+  
+  constructor( private contactoService: ContactosService ) {}
+  
   ngOnInit() {
+    this.listaContactos=this.contactoService.getContactos();
   }
-
 }
 
 

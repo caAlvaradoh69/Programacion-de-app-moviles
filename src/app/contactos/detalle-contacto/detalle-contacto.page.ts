@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Contacto} from '../contacto.model';
+import { ContactosService} from '../contactos.service';
 
 @Component({
   selector: 'app-detalle-contacto',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalle-contacto.page.scss'],
 })
 export class DetalleContactoPage implements OnInit {
+contacto: Contacto;
 
-  constructor() { }
+  constructor(private activateRoute: ActivatedRoute, 
+    private contactoService: ContactosService) { }
 
   ngOnInit() {
+    this.activateRoute.paramMap.subscribe(
+      paramMap=>{
+        const idContactoRecibido=paramMap.get('contactoId');
+        this.contacto=this.contactoService.getContacto(idContactoRecibido);
+      }
+    );
   }
 
 }
