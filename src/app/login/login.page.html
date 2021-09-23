@@ -1,23 +1,34 @@
-
-	<ion-toolbar>
+<ion-toolbar>
     <ion-buttons slot="start">
-      
+
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button color="primary" routerLink="/signup">Sign Up</ion-button>
+        <ion-button color="primary" routerLink="/signup">Sign Up</ion-button>
     </ion-buttons>
-  </ion-toolbar>
+</ion-toolbar>
 
 
 <ion-content>
-  <div id="header">
-    <h1>Login</h1>
-    <img src="../../assets/img/logoApp2.png" alt="">
-  </div>
-  <form id="form">
-    <app-input type="text" placeholder="Username"></app-input>
-    <app-input type="Password" placeholder="Password"></app-input>
-    <ion-button routerLink="/home" expand="block" shape="round"> Login </ion-button>
-  </form>
-</ion-content>
+    <div id="header">
+        <h1>Login</h1>
+        <img src="../../assets/img/logoApp2.png" alt="">
+    </div>
 
+
+    <ion-card-content>
+        <ion-item lines="full">
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-card-content>
+
+</ion-content>

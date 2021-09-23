@@ -8,31 +8,27 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  /**
-   * Se genera el modelo user con dos claves
-   * cada clave tiene su valor inicial
-   */
+  
   user={
     usuario:'',
     password:''
   };
-   // variable para mostrar el campo faltante
+   
  campo:string;
 
-  constructor(private router: Router,public toastController: ToastController) { } // Se debe instanciar
-
+  constructor(private router: Router,public toastController: ToastController) { } 
   ngOnInit(){
   }
   ingresar(){
-    // Se declara e instancia un elemento de tipo NavigationExtras
+    
     let navigationExtras: NavigationExtras = {
       state: {
-        user: this.user // Al estado se asignamos un objeto con clave y valor
+        user: this.user 
       }
     };
     if(this.validateModel(this.user)){
       if( this.user.usuario==='mmonte' && this.user.password==='123456')
-        this.router.navigate(['/home'],navigationExtras); // navegamos hacia el Home y enviamos información adicional
+        this.router.navigate(['/home'],navigationExtras); 
       else{
         this.presentToast('Usuario o password no validos');
       }
@@ -57,18 +53,15 @@ export class LoginPage implements OnInit {
       );
       toast.present();
     }
-  /**
-   * validateModel sirve para validar que se ingrese algo en los
-   * campos del html mediante su modelo
-   */
+  
     validateModel(model: any){
-    // Recorro todas las entradas que me entrega Object entries y obtengo su clave, valor
+    
     for (var [key, value] of Object.entries(model)) {
-      // Si un valor es "" se retornara false y se avisara de lo faltante
+      
       if (value==='') {
-        // Se asigna el campo faltante
+        
         this.campo=key;
-        // Se retorna false
+        
         return false;
       }
     }
