@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
     };
     if(this.validateModel(this.user)){
       if( this.user.usuario==='mmonte' && this.user.password==='123456')
-        this.router.navigate(['/contactos'],navigationExtras); // navegamos hacia el Home y enviamos información adicional
+        this.router.navigate(['/home'],navigationExtras); // navegamos hacia el Home y enviamos información adicional
       else{
         this.presentToast('Usuario o password no validos');
       }
