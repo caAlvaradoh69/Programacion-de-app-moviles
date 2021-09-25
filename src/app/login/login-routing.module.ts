@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },  {
+    path: 'reestablecer',
+    loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
   }
+
 ];
 
 @NgModule({

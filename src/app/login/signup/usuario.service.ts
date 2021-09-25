@@ -11,6 +11,7 @@ export class UsuariosService {
       password: '123456'
     },
   ];
+  
   constructor() { }
   getUsuario(usuarioInput: string)
   {
@@ -29,5 +30,6 @@ export class UsuariosService {
       }
     );   
   }
+
 }
 
