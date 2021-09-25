@@ -10,11 +10,9 @@ import { ContactosService } from '../contactos.service';
 })
 export class AsistenciaManualPage implements OnInit { 
   contact={
-    id: 'prueba',
+    id: ' ',
     nombre: '',
     apellidos: '',
-    direccion: '',
-    fono: '',
     email: '',
   };
 
@@ -39,8 +37,6 @@ export class AsistenciaManualPage implements OnInit {
           this.contact.id.valueOf(),
           this.contact.nombre.valueOf(),
           this.contact.apellidos.valueOf(),
-          this.contact.direccion.valueOf(),
-          this.contact.fono.valueOf(),
           this.contact.email.valueOf(),
           ),
           this.presentToast('Datos registrados correctamente');
