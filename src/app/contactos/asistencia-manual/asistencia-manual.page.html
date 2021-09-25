@@ -11,19 +11,19 @@
 <ion-content>
     <h1>Registro De Asistencia<br />Manual</h1>
 
+    <div id="form">
+        <ion-item class="ion-margin-bottom">
+            <ion-input [(ngModel)]="contact.nombre" placeholder="Nombre" type="text"></ion-input>
+        </ion-item>
 
-    <ion-item class="ion-margin-bottom">
-        <ion-input [(ngModel)]="contact.nombre" placeholder="Nombre" type="text"></ion-input>
-    </ion-item>
+        <ion-item class="ion-margin-bottom">
+            <ion-input [(ngModel)]="contact.apellidos" placeholder="Apellidos" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+            <ion-input [(ngModel)]="contact.email" placeholder="email@ejemplo.com" [type]="type"></ion-input>
+        </ion-item>
 
-    <ion-item class="ion-margin-bottom">
-        <ion-input [(ngModel)]="contact.apellidos" placeholder="Apellidos" type="text"></ion-input>
-    </ion-item>
-    <ion-item class="ion-margin-bottom">
-        <ion-input [(ngModel)]="contact.email" placeholder="email@ejemplo.com" [type]="type"></ion-input>
-    </ion-item>
-
-    <ion-button expand="block" shape="round" (click)="onSubmit()">Registrar Asistencia</ion-button>
-
+        <ion-button expand="block" shape="round" (click)="onSubmit()">Registrar Asistencia</ion-button>
+    </div>
 
 </ion-content>
