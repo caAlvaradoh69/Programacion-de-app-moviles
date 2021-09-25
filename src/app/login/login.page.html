@@ -14,15 +14,15 @@
         <img src="../../assets/img/logoApp2.png" alt="">
     </div>
 
-    <div id="form">    
+    <div id="form">
         <ion-item class="ion-margin-bottom">
-            <ion-input placeholder="Usuario" [type]="type" [(ngModel)]="user.usuario"></ion-input> 
+            <ion-input placeholder="Usuario" [type]="type" [(ngModel)]="user.usuario"></ion-input>
         </ion-item>
-        
+
         <ion-item class="ion-margin-bottom">
             <ion-input placeholder="Contraseña" type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-        
-        <ion-button  routerLink="/home" expand="block" shape="round"> Login </ion-button>
-    </div>    
+
+        <ion-button (click)="ingresar()" expand="block" shape="round"> Login </ion-button>
+    </div>
 </ion-content>
