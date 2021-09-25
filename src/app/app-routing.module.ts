@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:':contactoId',
         loadChildren: () => import('./contactos/detalle-contacto/detalle-contacto.module').then( m => m.DetalleContactoPageModule)
+      },
+      {
+        path: 'asistencia-manual',
+        loadChildren: () => import('./contactos/asistencia-manual/asistencia-manual.module').then( m => m.AsistenciaManualPageModule)
       }
     ]
   },
@@ -30,7 +35,13 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 
- 
+  {
+    path: 'signup',
+    loadChildren: () => import('./login/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  
+
+
 
 ];
 

@@ -7,9 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: ContactosPage
-  },  {
+  },
+  {
     path: 'detalle-contacto',
     loadChildren: () => import('./detalle-contacto/detalle-contacto.module').then( m => m.DetalleContactoPageModule)
+  },
+  {
+    path: 'asistencia-manual',
+    loadChildren: () => import('./asistencia-manual/asistencia-manual.module').then( m => m.AsistenciaManualPageModule)
   }
 
 ];

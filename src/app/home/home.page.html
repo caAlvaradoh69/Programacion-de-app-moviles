@@ -1,21 +1,22 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button color="primary" routerLink="/home">INICIO</ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button color="primary" routerLink="/login">
-        <ion-icon slot="icon-only" name="power-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button color="primary" routerLink="/home">INICIO</ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button color="primary" routerLink="/login">
+                <ion-icon slot="icon-only" name="power-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div id="header">
-    <h1>Registro De Asistencia</h1>
-    <ion-button expand="block" shape="round" routerDirection="forward">Generar QR asistencia</ion-button>
-    <ion-button expand="block" shape="round" routerDirection="forward">Escanear QR</ion-button>
-    <ion-button routerLink="/contactos" expand="block" shape="round" routerDirection="forward">Lista Curso</ion-button>
-  </div>  
+    <div id="header">
+        <h1>Registro De Asistencia</h1>
+        <ion-button expand="block" shape="round" routerDirection="forward">Generar QR asistencia</ion-button>
+        <ion-button routerLink="/contactos/asistencia-manual" expand="block" shape="round" routerDirection="forward">Asistencia Manual</ion-button>
+        <ion-button routerLink="/contactos" expand="block" shape="round" routerDirection="forward">Lista Presentes</ion-button>
+        <ion-button expand="block" shape="round" routerDirection="forward">Escanear QR</ion-button>
+    </div>
 </ion-content>

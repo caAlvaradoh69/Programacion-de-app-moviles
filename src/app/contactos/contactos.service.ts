@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 import { Contacto } from './contacto.model';
 @Injectable({
   providedIn: 'root'
@@ -85,11 +86,11 @@ export class ContactosService {
       direccion:'dasd 321',
       fono: '+56957854961',
       email:'asdasdadsa@gmail.com'
-    }
+    },
     
   ]
 
-  constructor() { }
+  constructor(public toastController: ToastController) { }
   getContactos()
   {
      return [...this.listaContactos];
@@ -102,7 +103,7 @@ export class ContactosService {
           }
   }
 
-  addContacto(nombre: string, apellidos: string, direccion: string,email: string, fono: string)
+  addContacto(id: string, nombre: string, apellidos: string, direccion: string,email: string, fono: string)
   {
     this.listaContactos.push(
       {
@@ -114,8 +115,22 @@ export class ContactosService {
         email
       }
     );
+    
   }
-
+  /**
+   * Muestra un toast al usuario (mensaje flotante)
+   * @param message Mensaje a presentar al usuario
+   * @param duration Duración el toast, este es opcional
+   */
+   async presentToast(message: string, duration?: number){
+    const toast = await this.toastController.create(
+      {
+        message,
+        duration:duration?duration:2000
+      }
+    );
+    toast.present();
+  }
   deleteContacto(contactoId: string)
   {
     this.listaContactos=this.listaContactos.filter(contacto => {return contacto.id !== contactoId  });
