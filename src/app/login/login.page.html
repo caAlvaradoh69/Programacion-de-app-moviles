@@ -14,21 +14,15 @@
         <img src="../../assets/img/logoApp2.png" alt="">
     </div>
 
-
-    <ion-card-content>
-        <ion-item lines="full">
-            <ion-label position="floating">Usuario</ion-label>
-            <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+    <div id="form">    
+        <ion-item class="ion-margin-bottom">
+            <ion-input placeholder="Usuario" [type]="type" [(ngModel)]="user.usuario"></ion-input> 
         </ion-item>
-        <ion-item lines="full">
-            <ion-label position="floating">Password</ion-label>
-            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        
+        <ion-item class="ion-margin-bottom">
+            <ion-input placeholder="Contraseña" type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-        <ion-row>
-            <ion-col>
-                <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
-            </ion-col>
-        </ion-row>
-    </ion-card-content>
-
+        
+        <ion-button  routerLink="/home" expand="block" shape="round"> Login </ion-button>
+    </div>    
 </ion-content>

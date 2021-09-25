@@ -14,12 +14,21 @@
 <ion-content>
   <h1>Registro De<br />Usuario</h1>
 
-  <form id="form">
-    <app-input placeholder="Username"></app-input>
-    <app-input placeholder="Email"></app-input>
-    <app-input type="password" placeholder="Password"></app-input>
+  <div id="form">
+    <ion-item class="ion-margin-bottom">
+      <ion-input placeholder="Usuario" [type]="type"></ion-input> 
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input placeholder="Contraseña" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input placeholder="Confirmar Contraseña" type="password"></ion-input>
+    </ion-item>
+
     <ion-button expand="block" shape="round" routerLink="/login">Registo</ion-button>
-  </form>
+  </div>
 
   <p>Al oprimir 'Registro' estas aceptando <br />nuestros terminos y condiciones.</p>
 </ion-content>

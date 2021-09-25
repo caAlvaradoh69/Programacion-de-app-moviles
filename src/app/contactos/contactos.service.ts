@@ -21,7 +21,72 @@ export class ContactosService {
       direccion:'dasd 321',
       fono: '+56957854961',
       email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'3',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'4',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'5',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'6',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'7',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'8',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'9',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
+    },
+    {
+      id:'10',
+      nombre:'Maria',
+      apellidos:'Silva Vera',
+      direccion:'dasd 321',
+      fono: '+56957854961',
+      email:'asdasdadsa@gmail.com'
     }
+    
   ]
 
   constructor() { }

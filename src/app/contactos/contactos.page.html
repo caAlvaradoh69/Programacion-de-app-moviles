@@ -1,16 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Contactos
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/contactos">Lista de Curso</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
-  <ion-text>Lista de Contactos </ion-text>
-
-
   <ion-list *ngFor="let element of listaContactos">  
     <ion-item [routerLink]="['./', element.id]">
       <ion-avatar slot="start">
@@ -19,18 +21,16 @@
       <ion-label>
         {{element.id}} {{element.nombre}} {{element.apellidos}}
       </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="primary">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="danger">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-item>  
   </ion-list>
-
-
-
-
-
-  <ion-content>
-    <div class="ion-padding">
-      <ion-button routerLink="/home" routerDirection="forward">vovler a home</ion-button>
-    </div>
-  </ion-content>
 </ion-content>
 
 
