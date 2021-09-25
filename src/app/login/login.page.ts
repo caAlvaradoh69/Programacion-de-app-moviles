@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Usuario } from './signup/usuario.model';
+import { UsuariosService } from './signup/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +15,10 @@ export class LoginPage implements OnInit {
     usuario:'',
     password:''
   };
-   
+ usuarioServic: Usuario;  
  campo:string;
 
-  constructor(private router: Router,public toastController: ToastController) { } 
+  constructor(private router: Router,private toastController: ToastController, private usuarioService: UsuariosService) { } 
   ngOnInit(){
   }
   ingresar(){
@@ -27,9 +29,10 @@ export class LoginPage implements OnInit {
       }
     };
     if(this.validateModel(this.user)){
-      if( this.user.usuario==='mmonte' && this.user.password==='123456')
-        this.router.navigate(['/home'],navigationExtras); 
-      else{
+      this.usuarioServic=this.usuarioService.getUsuario(this.user.usuario);
+      if(this.usuarioService.getUsuario(this.user.usuario).password === this.user.password){
+        this.router.navigate(['/home'],navigationExtras);
+      }else{
         this.presentToast('Usuario o password no validos');
       }
     }
