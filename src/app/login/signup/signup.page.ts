@@ -31,7 +31,7 @@ export class SignupPage implements OnInit {
     };
     if(this.usuario.confirm_password!=this.usuario.password)
     {
-      alert('Las contraseñas no coinciden');
+      this.presentToast('Las contraseñas no coinciden');
     }
     else{
       if(this.validateModel(this.usuario)){

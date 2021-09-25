@@ -33,7 +33,7 @@ export class LoginPage implements OnInit {
       if(this.usuarioService.getUsuario(this.user.usuario).password === this.user.password){
         this.router.navigate(['/home'],navigationExtras);
       }else{
-        this.presentToast('Usuario o password no validos');
+        this.presentToast('Usuario o contraseña no validos');
       }
     }
     else
